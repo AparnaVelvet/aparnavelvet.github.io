@@ -1,46 +1,77 @@
-/* Custom Stylesheet */
+/* Hacker Fuchsia Stylesheet */
 body {
-    background: linear-gradient(135deg, #ffeef8 0%, #e6f0fa 100%);
-        display: flex;
-            justify-content: center;
-                align-items: center;
-                    height: 100vh;
-                        margin: 0;
-                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                color: #4a3e4d;
-                                }
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    overflow: hidden;
+}
 
-                                .card {
-                                    background: rgba(255, 255, 255, 0.75);
-                                        padding: 30px;
-                                            border-radius: 24px;
-                                                box-shadow: 0 8px 32px rgba(255, 182, 193, 0.2);
-                                                    text-align: center;
-                                                        backdrop-filter: blur(10px);
-                                                            border: 1px solid rgba(255, 255, 255, 0.5);
-                                                                max-width: 80%;
-                                                                }
+.hacker-container {
+    background-color: #000000;
+    padding: 35px;
+    border-radius: 16px;
+    border: 2px solid #D10068;
+    box-shadow: 0 0 20px #D10068, inset 0 0 15px rgba(209, 0, 104, 0.3);
+    text-align: left;
+    max-width: 85%;
+    width: 400px;
+}
 
-                                                                h1 {
-                                                                    color: #8b5cf6;
-                                                                        font-size: 1.8rem;
-                                                                            margin-bottom: 10px;
-                                                                            }
+.glitch-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #D10068, 0 0 20px #D10068;
+    margin-bottom: 5px;
+}
 
-                                                                            p {
-                                                                                font-size: 1rem;
-                                                                                    line-height: 1.6;
-                                                                                        color: #6b5a72;
-                                                                                        }
+.status-bar {
+    color: #D10068;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-                                                                                        .lotus {
-                                                                                            font-size: 2.5rem;
-                                                                                                margin-top: 15px;
-                                                                                                    animation: float 3s ease-in-out infinite;
-                                                                                                    }
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #D10068;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D10068;
+    animation: pulse 1.5s infinite;
+}
 
-                                                                                                    @keyframes float {
-                                                                                                        0%, 100% { transform: translateY(0); }
-                                                                                                            50% { transform: translateY(-10px); }
-                                                                                                            }
-                                                                                                            
+.console-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 10px 0;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.neon-lotus {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 25px;
+    filter: drop-shadow(0 0 12px #D10068);
+    animation: float-hacker 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.4; }
+}
+
+@keyframes float-hacker {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+}
